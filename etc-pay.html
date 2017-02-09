@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" height="device-height" width="device-width"/>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=pL7rYMxjdNgdgkVETbew5hC1QCVuTnuC"></script>
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <title>ETC</title>
+</head>
+<body>
+  <div class="toolbar" id="charge_bar">
+  <a href="index.html" class="back">
+    <i class="fa fa-angle-left"></i>
+    <span>返回</span>
+  </a>
+  <a href="javascript:menushow();"class="menu" id="menu">
+      <i class="fa fa-ellipsis-h"></i>
+      <ul id="menulist">
+          <li>ETC收款</li>
+          <li>ETC付款</li>
+          <li>ETC绑定</li>
+          <li>结算单</li>
+          <li>订单查询</li>
+          <li>银行绑定</li>
+      </ul>
+    </a>
+  </div>
+  <div class="etc-context">
+    <div class="etc-bar">
+    	<i class="fa fa-angle-left icon-l"></i>
+    	<span>充值</span>
+    	<i class="fa fa-exclamation-circle icon-r"></i>
+    </div>
+    <div class="progress">
+     <span class="ellipsis">.........................................</span>
+     <div class="setp-one">
+     	<i class="fa fa-map-marker"></i>
+     	<span>1</span>
+     	<p>读卡</p>
+     </div>
+     <div class="step-two">
+     	<span class="step-num">2</span>
+     	<p class="step-txt">账户充值/充值圈存</p>
+     </div>
+     <div class="step-three">
+     	<span class="step-num">3</span>
+     	<p class="step-txt">成功</p>
+     </div> 	
+    </div>
+    <div class="nfc-pic">
+    	<img src="img/nfc.png">
+    	<p>请按示意图读卡</p>
+    </div>
+    <div class="read-nfc">
+    	<span>读卡</span>	
+    </div>
+    <div class="read-txt">
+    	<span>无卡充值</span>
+    	<i class="fa fa-angle-double-right"></i>
+    </div>
+  </div>
+
+  </body>
+  </html>
+  <script type="text/javascript" src="js/common.js"></script>

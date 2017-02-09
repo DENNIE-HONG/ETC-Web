@@ -1,0 +1,456 @@
+body,html{
+  height: 100%;
+  margin:0;
+  padding: 0;
+  color: #fff;
+}
+a:link, 
+a:visited { 
+  color:#fff; 
+  text-decoration:none; 
+}
+.toolbar{
+  position: fixed;
+  top:0;
+  width: 100%;
+  height: 3rem;
+  background: #000;
+  z-index: 100;
+}
+.menu{
+  float: right;
+  height: 100%;
+  /*color: #fff;*/
+  text-align: right;
+}
+.menu:hover ul{display: block;}
+.menu i{
+  margin-right: 0.5rem;
+  width: 2rem;
+  line-height: 3rem;
+  font-size: 1.2rem;
+}
+.menu ul{
+  display: none;
+  position: relative;
+  width: 6.5rem;
+  padding: 0;
+  margin:0;
+  background: #000;
+  z-index: 100;
+}
+.menu ul li{
+  list-style-type: none;
+  float: none;
+  line-height: 2rem;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+}
+.menu ul li:last-child{border-bottom: 0}
+/*.menu:hover{
+  color: red;
+  display:block;
+}*/
+
+#allmap{
+  margin-top: 3rem;
+  height: 45%;
+}
+#city{
+  position: fixed;
+  top: 4rem;
+  z-index: 100;
+}
+.function{
+  /*height: 58%;*/
+  font-size: 0.8rem;
+  background-color: transparent;
+  background-image: -moz-linear-gradient(top,#5396a7,#6e6b88);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#5396a7),to(#6e6b88));
+  background-image: -webkit-linear-gradient(top,#5396a7,#6e6b88);
+  background-image: -o-linear-gradient(top,#5396a7,#6e6b88);
+  background-image: linear-gradient(to bottom,#5396a7,#6e6b88);
+  /*background-repeat: repeat-x*/
+}
+.nav{
+  clear: both;
+  overflow: hidden;
+  border-bottom: 1px solid #6fa6ba;
+}
+.navcon{
+  width: 25%;
+  height: 2.8rem;
+  float: left;
+  margin: 0.8rem 0;
+  display: inline-block;
+  text-align: center;
+}
+.nav .active{
+  background: #75a6bd;
+}
+.navcon:hover span{background: #75a6bd;}
+.navcon span{
+  padding: 0.6rem 1.2rem;
+  line-height: 3rem;
+  border: 1px solid #74b0ba;
+  border-radius: 39%;
+
+}
+.content{overflow: hidden;}
+.content a:link{color: #fff;}
+.content .conlist{
+  position: relative;
+  display: inline-block;
+  float: left;
+  width: 50%;
+  height: 4.7rem;
+  border-right: 1px solid #6fa6ba;
+  border-bottom: 1px solid #6fa6ba;
+  box-sizing: border-box;
+}
+.conlist:nth-child(even){
+  border-right: 0;
+}
+.conlist i{
+  display: inline-block;
+  width: 2.8rem;
+  height: 2.8rem;
+  margin: 0.8rem;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+}
+.conlist:nth-child(1) i{
+  color: #ccdf7e;
+  border: 2px solid #ccdf7e;
+}
+.conlist:nth-child(2) i{
+  color: #ff99c7;
+  border: 2px solid #ff99c7;
+}
+.conlist:nth-child(3) i{
+  color: #62ece9;
+  border: 2px solid #62ece9;
+}
+.conlist:nth-child(4) i{
+  color: #e6a798;
+  border: 2px solid #e6a798;
+}
+.conlist:nth-child(5) i{
+  color: #8ec9ff;
+  border: 2px solid #8ec9ff;
+}
+.conlist:nth-child(6) i{
+  color: #c2a3ff;
+  border: 2px solid #c2a3ff;
+}
+
+.conlist span{
+  /*line-height: 3rem;*/
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+.conlist .ch{
+  position: absolute;
+  top:1.5rem;
+}
+.conlist .en{
+  position: absolute;
+  top:2.5rem;
+  font-size: 9px;
+  font-weight: normal;
+}
+.record{
+  position: relative;
+  /*height: 4.7rem;*/
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+}
+.record > span{
+  margin-left: 0.8rem;
+  margin-top: 0.6rem;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1.1rem;
+  text-align: top;
+}
+.text{
+  display: inline-block;
+  background-color: #83809b;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+.text p{
+  margin: 0;
+  line-height: 1rem;
+  font-size: 0.5rem;
+}
+.btn-record{
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+.btn-record > span{
+  padding:0.5rem 0.7rem;
+  border: 1px solid #f0f0f3;
+  border-radius: 30%;
+  background-color: #908da5;
+  font-size: 1rem;
+}
+
+@media screen and (min-height: 1600px) {
+   .content .conlist{height: 5.5rem;}
+  }
+
+/*charge-pile*/
+#charge-map,
+#gas-map{
+  height: 60%;
+  margin-top: 3rem;
+}
+.back{
+  display: inline-block;
+  /*width: 3rem;*/
+  height: 100%;
+  line-height: 3rem;
+}
+.back>i{
+  padding-left: 0.8rem;
+  line-height: 3rem;
+  font-size: 1.8rem;
+}
+.back>span{
+  vertical-align: top;
+  line-height: 3.2rem;
+}
+
+
+
+/*payment-center*/
+.context{
+  height: 100%;
+  background-color: transparent;
+  background-image: -moz-linear-gradient(top,#6cb4a9,#757090);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#6cb4a9),to(#757090));
+  background-image: -webkit-linear-gradient(top,#6cb4a9,#757090);
+  background-image: -o-linear-gradient(top,#6cb4a9,#757090);
+  background-image: linear-gradient(to bottom,#6cb4a9,#757090);
+  color: #fff;
+  font-size: 1.3rem;
+}
+.qr-code>span{
+  float: left;
+  margin-top: 8rem;
+  margin-left: 1rem;
+  font-size: 0.8rem;
+}
+.qr-code{
+  clear: both;
+  overflow: hidden;
+}
+.qr-code .pic{
+  display: inline-block;
+  float: right;
+  width: 5.5rem;
+  margin-right: 3rem;
+  margin-top: 3.8rem;
+}
+.pic>img{
+  width: 100%;
+  height: 100%;
+}
+.pic>p{
+  font-size: 0.5rem;
+  margin-top: 0.2rem;
+}
+.btn-group{overflow: hidden;}
+.btn-group a{
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin-top: 0.8rem;
+  text-align: center;
+}
+.btn-group span{
+  display: inline-block;
+  width: 83%;
+  padding: 0.6rem 0;
+  text-align: center;
+  background:rgba(125,167,166,0.8);
+  border-radius: 5%;
+}
+.payment{
+  margin-top: 1.5rem;
+  clear: both;
+  overflow: hidden;
+  border-top: 1px solid #fff;
+}
+.pay-method{
+  height: 5rem;
+  border-bottom: 1px solid #fff;
+  line-height: 5rem;
+}
+.pay-method>img{
+  margin-top: 0.8rem;
+  height: 3rem;
+  width: 3rem;
+  margin-left: 1rem;
+  border-radius: 23%;
+}
+.pay-method>span{
+  vertical-align: top;
+  line-height: 4.5rem;
+  padding-left: 1rem;
+}
+
+/*custom-service*/
+.serve-context{
+  min-height: 100%;
+  background-color: transparent;
+  background-image: -moz-linear-gradient(top,#6cb4a9,#757090);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#6cb4a9),to(#757090));
+  background-image: -webkit-linear-gradient(top,#6cb4a9,#757090);
+  background-image: -o-linear-gradient(top,#6cb4a9,#757090);
+  background-image: linear-gradient(to bottom,#6cb4a9,#757090);
+}
+.custom-service{
+  padding: 4rem 1rem 0.7rem;
+
+}
+.custom-service>img{
+  width: 100%;
+  height: 100%;
+  border-radius: 3%;
+}
+
+/*etc-pay.*/
+.etc-context{
+  background: #f0f0f0;
+  min-height: 100%;
+
+}
+.etc-bar{
+  padding-top:3rem;
+  height: 2.5rem;
+  background: #ebebeb;
+  text-align: center;
+  line-height: 2.5rem;
+}
+.etc-bar i{
+  color: #33a337;
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+.etc-bar span{
+  font-size: 0.8rem;
+  color: #000;
+}
+.etc-bar .icon-l{ 
+  float: left;
+  margin-left: 0.5rem;
+}
+.etc-bar .icon-r{ 
+  float: right;
+  margin-right: 0.5rem;
+}
+.progress{
+  position: relative; 
+  margin-top:0.7rem;
+  text-align: center;
+}
+.progress .ellipsis{ 
+  display: inline-block;
+  font-size: 1rem;
+  color: #bebebe;
+  overflow: hidden;
+}
+.progress i{ 
+  color: #33a337;
+  font-size: 2.5rem;
+}
+.setp-one{ 
+  position: absolute;
+  left: 0rem;
+  top: -0.5rem;
+  color: #33a337;
+  width: 33.33%;
+  text-align: center;
+}
+.setp-one i{ 
+  position: relative;
+}
+.setp-one span{ 
+  position: absolute;
+  top: 0.3rem;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-left: -1.2rem;
+  background: #f0f0f0;
+  border-radius: 50%;
+  font-size: 9px;
+}
+.setp-one p{ 
+  font-size: 0.8rem;
+}
+.step-two{ 
+  position: absolute;
+  top: 0;
+  left: 33%;
+  display: inline-block;
+  width: 33.33%;
+  text-align: center;
+}
+.step-num{ 
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #bfbfbf;
+  line-height: 1.5rem;
+}
+.step-txt{
+  margin-top: 1.3rem; 
+  color: #bfbfbf;
+  font-size: 0.8rem;
+  text-align: bottom;
+}
+.step-three{ 
+  position: absolute;
+  top: 0;
+  left: 66%;
+  display: inline-block;
+  width: 33.33%;
+  text-align: center;
+}
+.nfc-pic{
+  margin:5rem auto 3rem; 
+  width: 16rem;
+  height: 16rem;
+}
+.nfc-pic img{ 
+  height: 100%;
+  width: 100%;
+}
+.nfc-pic>p{
+  margin:1rem 0; 
+  font-size: 0.8rem;
+  color: #7b7b7b;
+  text-align: center;
+}
+.read-nfc{ 
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin:0 auto;
+  background: #33a337;
+  border-radius: 50%;
+  line-height: 2.5rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
